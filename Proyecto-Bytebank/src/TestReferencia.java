@@ -1,12 +1,12 @@
 
 public class TestReferencia {
 	
-	public static void main(String[] args) {
-		cuenta PrimeraCuenta = new cuenta();
-		PrimeraCuenta.saldo = 200;
+	public static void main(String[] args) { //Definiendo un main.
+		Cuenta PrimeraCuenta = new Cuenta(0,0); //Creando una nueva cuenta.
+		PrimeraCuenta.depositar(200);
 		
-		cuenta SegundaCuenta = PrimeraCuenta;
-		SegundaCuenta.saldo = 100;
+		Cuenta SegundaCuenta = PrimeraCuenta;
+		SegundaCuenta.depositar(100);
 		
 		System.out.println("Saldo PrimeraCuenta: " 
 		+ PrimeraCuenta.getSaldo());
@@ -14,7 +14,7 @@ public class TestReferencia {
 		System.out.println("Saldo SegundaCuenta: " 
 				+ SegundaCuenta.getSaldo());
 		
-		SegundaCuenta.saldo += 400;
+		SegundaCuenta.depositar(400);
 		System.out.println("Saldo PrimeraCuenta: " 
 				+ PrimeraCuenta.getSaldo());
 		

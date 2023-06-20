@@ -1,15 +1,14 @@
 
-public class PruebaMetodos {
-	public static void main(String[] args) {
-		cuenta micuenta = new cuenta();
-		micuenta.saldo = 300;
-		micuenta.depositar(200);
-		System.out.println(micuenta.saldo);
+public class PruebaMetodos { // Definiendo la clase pruebasMetodos.
+	public static void main(String[] args) { // Aca creas un main.
+		Cuenta micuenta = new Cuenta(0,0); // Creas una nueva cuenta
+		micuenta.depositar(500);
+		System.out.println(micuenta.getSaldo());
 		
 		micuenta.retirar(100);
 		System.out.println(micuenta.getSaldo());
 		
-		cuenta cuentaDeMai = new cuenta();
+		Cuenta cuentaDeMai = new Cuenta(0,0);
 		cuentaDeMai.depositar(1000);
 		boolean puedetransferir = cuentaDeMai.tranferir(400, micuenta);
 		
@@ -20,7 +19,7 @@ public class PruebaMetodos {
 		}
 		
 		
-		System.out.println(cuentaDeMai.saldo);
-		System.out.println(micuenta.saldo);
+		System.out.println(cuentaDeMai.getSaldo());
+		System.out.println(micuenta.getSaldo());
 	}
 }
